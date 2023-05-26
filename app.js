@@ -3,6 +3,8 @@ const db = require("./models");
 const { User, Blog } = db;
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.get("/user", async (req, res) => {
   // console.log(db)
 
@@ -17,6 +19,6 @@ app.get("/blog", async (req, res) => {
   res.json(blogs);
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("running...");
 });
