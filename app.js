@@ -5,6 +5,12 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
+app.get("/", async (req, res) => {
+  // console.log(db)
+
+  res.send("Hello from Skillvul team 👋");
+});
+
 app.get("/user", async (req, res) => {
   // console.log(db)
 
